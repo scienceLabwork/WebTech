@@ -31,6 +31,22 @@ def l2a1():
 def l2a2():
     return render_template('l2a2.html')
 
+@app.route('/getformdata', methods=['POST'])
+def getformdata():
+    data = request.form
+    return """
+    <h1>Form Data</h1>
+    <p>Name: {}</p>
+    <p>Email: {}</p>
+    <p>Date of Birth: {}</p>
+    <p>Gender: {}</p>
+    <p>Country: {}</p>
+    """.format(data['name'],data['email'],data['dob'],data['gender'],data['country'])
+
+@app.route("/favicon.ico")
+def favicon():
+    return app.send_static_file("favicon.ico")
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=port, debug=True)
