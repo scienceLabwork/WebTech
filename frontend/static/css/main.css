@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+
+h1{
+    margin-top: 2rem;
+    text-align: center;
+    font-family: 'Handjet', cursive;
+    font-weight: 200;
+    font-size: 3rem;
+}
+
+.container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container2{
+    max-width: 1500px;
+}
+
+.fstyle{
+    font-family: 'Borel', serif;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.fweight{
+    font-weight: 200;
+}
+
+.fsize{
+    font-size: 1.5rem;
+}
+
+.fvariant{
+    font-variant: small-caps;
+}
+
+.ftransform{
+    text-transform: capitalize;
+}
+
+.fdecoration{
+    text-decoration: underline;
+}
+
+.fcolor{
+    color: red;
+}
+
+.flineheight{
+    line-height: 1.5;
+}
+
+.fletter{
+    letter-spacing: 0.5rem;
+}
+
+.fword{
+    word-spacing: 0.5rem;
+}
+
+.fshadow{
+    text-shadow: 2px 2px 2px rgb(222, 205, 22);
+}
+
+.bg1{
+    background-color: rgb(229, 211, 8);
+}
