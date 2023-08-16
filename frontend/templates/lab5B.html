@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5</title>
+    <link href="/css/main.css" rel="stylesheet">
+    <style>
+        .align-centre{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .shape1{    
+            width: 150px;
+            height: 150px;
+            background-color: rgb(13, 223, 48);
+            border-radius: 100% 0 100% 0;
+            rotate: 0deg;
+            grid-row: 1;
+            grid-column: auto;
+        }
+        .shape2{    
+            width: 150px;
+            height: 150px;
+            background-color: rgb(13, 223, 48);
+            border-radius: 100% 0 100% 0;
+            rotate: 90deg;
+            grid-row: 1;
+        }
+        .shape3{    
+            width: 150px;
+            height: 150px;
+            background-color: rgb(13, 223, 48);
+            border-radius: 100% 0 100% 0;
+            rotate: 90deg;
+            grid-row: 2;
+        }
+        .shape4{    
+            width: 150px;
+            height: 150px;
+            background-color: rgb(13, 223, 48);
+            border-radius: 100% 0 100% 0;
+            rotate: 180deg;
+            grid-row: 2;
+        }
+        .grid-layout{
+            display: inline-grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    </style>
+</head>
+<body>
+    <h1>Artistic Pattern</h1>
+    <div class="align-centre">
+        <div class="grid-layout">
+            <!-- Using only 4 division -->
+            <div class="shape1"></div>
+            <div class="shape2"></div>
+            <div class="shape3"></div>
+            <div class="shape4"></div>
+        </div>
+    </div>
+</body>
+</html>
