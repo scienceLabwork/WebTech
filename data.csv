@@ -10,3 +10,7 @@ count,desc
 4B,"Background concepts:"
 5A,"Demonstrate various border styles on HTML. Elements."
 5B,"Write a code on four div elements as shown in below given figure."
+6A,"Develop HTML Code that displays horizontal navigation menu bar using unordered list."
+6B,"Demonstrate Table and Column properties refer the following figure as sample"
+7A,"Write a JavaScript that takes an integer value and display the number with its digits in reversed order."
+7B,"Write a JavaScript that read a set of N single digits and convert them into single decimal integer, "
