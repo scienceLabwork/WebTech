@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21BCM054 LAB 7A</title>
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/dist/output.css" rel="stylesheet">
+    <script>
+        function reverseNumber() {
+            var num = document.getElementById("dataInput").value;
+            var rev = 0;
+            while (num > 0) {
+                rev = rev * 10 + num % 10;
+                num = Math.floor(num / 10);
+            }
+            document.getElementById("result").innerHTML = "Reversed Number is: "+rev;
+        }
+    </script>
+</head>
+
+<body>
+    <h1 class="text-5xl mt-6">Reverse Number</h1>
+    <form class="max-w-md mx-auto py-4 px-8 bg-blue-500 mt-10 rounded-xl shadow-xl">
+        <div class="mb-4">
+            <label class="block text-white text-sm font-bold mb-2" for="dataInput">
+                Enter a number:
+            </label>
+            <input
+                class="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="dataInput" type="text" placeholder="Enter data">
+        </div>
+        <div class="flex items-center justify-center">
+            <button class="bg-white text-blue-500 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="button" onclick="reverseNumber()">
+                Reverse Number
+            </button>
+        </div>
+        <div class="flex items-center justify-center mt-4">
+            <p class="text-white bg-blue-500 py-2 px-4 rounded">
+                <span id="result"></span>
+            </p>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21BCM054 Lab-6A</title>
+    <link href="/css/main.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Borel&family=Tilt+Prism&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Tilt+Prism&display=swap');
+        html,body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        nav{
+            background-color: #ececec;
+            padding: 0;
+            margin: 0;
+        }
+        .logo{
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            gap: 1rem;
+        }
+        .logo:hover{
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            gap: 1rem;
+            cursor: pointer;
+        }
+        .navbar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            background-color: #ececec;
+            padding: 1rem;
+            margin-left: -5rem;
+            margin-right: 0;
+            margin-top: 0.4rem;
+            margin-bottom: 0.4rem;
+            gap: 1.8rem;
+        }
+        a{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-decoration: none;
+            color: #000;
+        }
+        a:hover{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-decoration: none;
+            color: #000;
+            text-shadow: 0 0 0.1rem #279EFF;
+        }
+        h1{
+            font-family: 'Tilt Prism', cursive;
+            margin: 0.5rem;
+            padding: 0; 
+            font-size: 2rem;
+        }
+        .mainnav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 2.5rem;
+            padding-right: 3.5rem;
+        }
+        .lbtn{
+            float: right;
+            padding-left: 1.4rem;
+            padding-right: 1.4rem;
+            padding-top: 0.8rem;
+            padding-bottom: 0.8rem;
+            font-size: 0.9rem;
+            border: 1px solid #279EFF;
+            background-color: #279EFF;
+            color: #fff;
+            border-radius: 0.5rem;
+            font-weight: 600;
+        }
+        .lbtn:hover{
+            float: right;
+            padding-left: 1.4rem;
+            padding-right: 1.4rem;
+            padding-top: 0.8rem;
+            padding-bottom: 0.8rem;
+            font-size: 0.9rem;
+            border: 1px solid #279EFF;
+            background-color: #ececec;
+            color: #279EFF;
+            border-radius: 0.5rem;
+            font-weight: 600;
+        }
+        .gettext{
+            font-family: 'Poppins', sans-serif;
+            font-style: bold;
+        }
+        .center-screen{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="mainnav">
+            <div class="logo">
+                <h1>Rudra Shah</h1>
+            </div>
+            <ul class="navbar">
+                <li><a href="?name=Home">Home</a></li>
+                <li><a href="?name=About">About</a></li>
+                <li><a href="?name=Contact">Contact</a></li>
+            </ul>
+            <button class="lbtn" onclick="window.location.href='https://www.linkedin.com/in/rudra-shah-b044781b4/'">Linkedin</button>
+        </div>
+    </nav>
+    <div class="center-screen">
+        <h1 class="gettext">Click on Nav link</h1>
+    </div>
+    <script>
+        var logo = document.querySelector('.logo')
+        logo.addEventListener('click', () => {
+            window.location.href = "/"
+        })
+        //read get parameter
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const name = urlParams.get('name')
+        var gettext = document.querySelector('.gettext')
+        if(name == null){
+            gettext.innerHTML = "Click on Nav link"
+        }
+        else{
+            gettext.innerHTML = "You clicked on " + name
+        }
+        console.log(name)
+    </script>
+</body>
+</html>
