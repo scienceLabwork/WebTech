@@ -7,17 +7,6 @@
     <title>21BCM054 LAB 7A</title>
     <link href="/css/main.css" rel="stylesheet">
     <link href="/css/dist/output.css" rel="stylesheet">
-    <script>
-        function reverseNumber() {
-            var num = document.getElementById("dataInput").value;
-            var rev = 0;
-            while (num > 0) {
-                rev = rev * 10 + num % 10;
-                num = Math.floor(num / 10);
-            }
-            document.getElementById("result").innerHTML = "Reversed Number is: "+rev;
-        }
-    </script>
 </head>
 
 <body>
@@ -32,9 +21,13 @@
                 id="dataInput" type="text" placeholder="Enter data">
         </div>
         <div class="flex items-center justify-center">
-            <button class="bg-white text-blue-500 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            <button class="bg-white text-blue-500 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-4"
                 type="button" onclick="reverseNumber()">
                 Reverse Number
+            </button>
+            <button class="bg-white text-blue-500 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-4"
+            type="button" onclick="popfunc()">
+                using pop-up
             </button>
         </div>
         <div class="flex items-center justify-center mt-4">
@@ -43,6 +36,26 @@
             </p>
         </div>
     </form>
+    <script>
+        function reverseNumber() {
+            var num = document.getElementById("dataInput").value;
+            var rev = 0;
+            while (num > 0) {
+                rev = rev * 10 + num % 10;
+                num = Math.floor(num / 10);
+            }
+            document.getElementById("result").innerHTML = "Reversed Number is: "+rev;
+        }
+        function popfunc(){
+            let num = window.prompt("Enter a number:");
+            var rev = 0;
+            while (num > 0) {
+                rev = rev * 10 + num % 10;
+                num = Math.floor(num / 10);
+            }
+            document.getElementById("result").innerHTML = "Reversed Number is: "+rev;
+        }
+    </script>
 </body>
 
 </html>

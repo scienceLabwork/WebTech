@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21BCM054 LAB 8A</title>
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <div class="justify-center items-center min-h-screen text-blue-600 p-12">
+        <form class="form-container">
+          <label for="input" class="block mb-2">Amount:</label>
+          <input type="text" id="input" name="input" class="border border-gray-300 rounded px-3 py-2 mb-4 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+          <button type="button" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" onclick="convert()">Convert</button>
+        </form>
+        <table class="table-fixed">
+            <thead>
+              <tr>
+                <th class="w-1/2 pr-2">Coin</th>
+                <th class="w-1/2 pl-2">To-Give</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-300">100</td>
+                <td class="border border-gray-300" id="100"></td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300">50</td>
+                <td class="border border-gray-300" id="50"></td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300">20</td>
+                <td class="border border-gray-300" id="20"></td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300">10</td>
+                <td class="border border-gray-300" id="10"></td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300">5</td>
+                <td class="border border-gray-300" id="5"></td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300">2</td>
+                <td class="border border-gray-300" id="2"></td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300">1</td>
+                <td class="border border-gray-300" id="1"></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <script>
+        function convert() {
+            var num = document.getElementById("input").value;
+            var coins = [100, 50, 20, 10, 5, 2, 1];
+            var result = [];
+            for (var i = 0; i < coins.length; i++) {
+                result.push(Math.floor(num / coins[i]));
+                num = num % coins[i];
+            }
+            document.getElementById("100").innerHTML = result[0];
+            document.getElementById("50").innerHTML = result[1];
+            document.getElementById("20").innerHTML = result[2];
+            document.getElementById("10").innerHTML = result[3];
+            document.getElementById("5").innerHTML = result[4];
+            document.getElementById("2").innerHTML = result[5];
+            document.getElementById("1").innerHTML = result[6];
+        }
+      </script>
+</body>
+</html>
